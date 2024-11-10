@@ -20,6 +20,7 @@
     "express": "^4.21.1",
     "file-type": "^19.6.0",
     "nanoid": "^5.0.8",
+    "node-fetch": "^2.6.1",
     "nodemon": "^3.1.7"
   }
 }

@@ -7,7 +7,7 @@ import downloadRoutes from "./routes/download.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -17,11 +17,10 @@ app.use(express.json());
 app.use("/api/media", mediaRoutes);
 app.use("/api/download", downloadRoutes);
 
-app.get("/", (req, res) => {
-  console.log("[GET ROUTE]");
-  res.send("HELLO FROM HOMEPAGE");
-});
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.listen(PORT, () =>
   console.log(`Server running on port: ${PORT}`)
 );
+
+export default app
